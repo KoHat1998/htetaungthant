@@ -60,14 +60,15 @@
       <div>
         <h2 class="section-title">Overview</h2>
         <p>This is a simple two-channel live streaming web app built with Node.js, Socket.IO, and Mediasoup.
-It lets one of two broadcasters go live (camera or screen) and allows multiple viewers to watch in real time.</p>
+            It lets one of two broadcasters go live (camera or screen) and allows multiple viewers to watch in real time.</p>
         <h3>Key features</h3>
         <ul class="feature-list">
-          <li>Multi-room architecture (independent rooms and IDs)</li>
-          <li>Local pin: switch main view without affecting others</li>
-          <li>Mediasoup SFU for scalable routing</li>
-          <li>ICE/STUN/TURN support for NAT traversal</li>
-          <li>Responsive UI with primary video + side thumbnails</li>
+          <li>Two broadcaster channels: b1 and b2</li>
+          <li>Live camera or screen sharing</li>
+          <li>Real-time video/audio streaming using WebRTC + Mediasoup</li>
+          <li>Viewer page with quality selector (Auto / High / Medium / Low)</li>
+          <li>Live viewer count</li>
+          <li>Responsive UI (desktop + mobile)</li>
         </ul>
         <div class="meta">
           <p><strong>Stack:</strong> Node.js, Express, Socket.IO, Mediasoup, HTML/CSS/JS, AWS EC2, Caddy/Nginx</p>
