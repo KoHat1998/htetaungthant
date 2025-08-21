@@ -146,3 +146,11 @@ body {
 @media (max-width: 760px) {
   .about { grid-template-columns: 1fr; }
 }
+
+/* Make anchor targets align below sticky header */
+#projects, #about, #contact { scroll-margin-top: 80px; }
+
+/* Make the entire card-link clickable and accessible */
+.card-link { text-decoration: none; color: inherit; display: block; }
+.card-link .btn { pointer-events: none; }
+.card-link:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; border-radius: 20px; }

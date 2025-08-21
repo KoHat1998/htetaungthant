@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kohat-Live — Project</title>
+  <meta name="description" content="Kohat-Live is a WebRTC conferencing app with multi-room support and mediasoup backend." />
+  <meta property="og:title" content="Kohat-Live — Project" />
+  <meta property="og:description" content="Real-time WebRTC conferencing with multi-room, pin, and mediasoup backend." />
+  <link rel="icon" href="../favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .proj-hero { padding: 64px 0 24px; text-align: center; }
+    .proj-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    .proj-content { padding: 24px 0 64px; }
+    .proj-grid { display: grid; gap: 24px; grid-template-columns: 1.1fr .9fr; align-items: start; }
+    .demo { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+    .demo img { width: 100%; height: auto; display: block; }
+    .feature-list { margin: 0; padding-left: 18px; }
+    .meta { display: grid; gap: 10px; }
+    @media (max-width: 860px) { .proj-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <span class="brand-badge">HAT</span>
+        <span class="brand-text">Htet Aung Thant</span>
+      </a>
+      <nav class="top-nav" aria-label="primary">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☾</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="proj-hero">
+    <div class="container">
+      <h1>Kohat-Live</h1>
+      <p class="muted">Real-time WebRTC conferencing with multi-room, pin, and mediasoup backend.</p>
+      <div class="proj-actions">
+        <a class="btn primary" href="https://kohat-live.htetaungthant.com" target="_blank" rel="noopener noreferrer">Open live app</a>
+        <a class="btn ghost" href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="proj-content">
+    <div class="container proj-grid">
+      <div class="demo">
+        <!-- Replace the src with your real screenshot path -->
+        <img src="../images/kohat-live-demo.png" alt="Kohat-Live demo screenshot" />
+      </div>
+      <div>
+        <h2 class="section-title">Overview</h2>
+        <p>Kohat-Live is a lightweight video conferencing web app optimized for low-latency group calls. Users can create rooms, invite others via room ID, pin streams locally, and share multiple tracks.</p>
+        <h3>Key features</h3>
+        <ul class="feature-list">
+          <li>Multi-room architecture (independent rooms and IDs)</li>
+          <li>Local pin: switch main view without affecting others</li>
+          <li>Mediasoup SFU for scalable routing</li>
+          <li>ICE/STUN/TURN support for NAT traversal</li>
+          <li>Responsive UI with primary video + side thumbnails</li>
+        </ul>
+        <div class="meta">
+          <p><strong>Stack:</strong> Node.js, Express, Socket.IO, Mediasoup, HTML/CSS/JS, AWS EC2, Caddy/Nginx</p>
+          <p><strong>Status:</strong> Live</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="y"></span> Htet Aung Thant</p>
+      <div class="footer-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const btn = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    btn.addEventListener('click', () => {
+      const cur = root.getAttribute('data-theme');
+      root.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>

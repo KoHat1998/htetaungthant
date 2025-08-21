@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Htet Aung Thant — Projects</title>
-  <meta name="description" content="Welcome to Htet Aung Thant’s project hub. Explore WebRTC, Computer Vision, Smart Doorbell, and more." />
+  <meta name="description" content="Welcome to Htet Aung Thant’s project hub. Explore live demos and case studies." />
   <meta property="og:title" content="Htet Aung Thant — Projects" />
-  <meta property="og:description" content="Explore my projects: WebRTC, Computer Vision, Smart Doorbell, and more." />
+  <meta property="og:description" content="Explore my projects and live apps." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,12 +35,10 @@
   <section class="hero">
     <div class="container hero-inner">
       <h1>Hi, I’m Htet 👋</h1>
-      <p class="sub">
-        This is my project hub. Pick a project below to jump straight to the live app.
-      </p>
+      <p class="sub">This is my project hub. Click a project to view details and links.</p>
       <div class="quick-actions">
         <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn ghost" href="mailto:contact@htetaungthant.com">Contact</a>
+        <a class="btn ghost" href="mailto:htetaungthant1998@gmail.com">Contact</a>
       </div>
     </div>
     <div class="hero-gradient" aria-hidden="true"></div>
@@ -51,53 +49,16 @@
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="grid">
-        <!-- WebRTC -->
-        <article class="card">
+        <!-- Kohat-Live (single project card) -->
+        <a class="card card-link" href="projects/kohat-live.html" aria-label="Open Kohat-Live project page">
           <div class="card-top">
-            <h3>WebRTC Conferencing</h3>
-            <p class="muted">Real-time video rooms with pin, multiple streams, and mediasoup.</p>
+            <h3>Kohat-Live</h3>
+            <p class="muted">Real-time WebRTC conferencing with multi-room, pin, and mediasoup backend.</p>
           </div>
           <div class="card-bottom">
-            <a class="btn small" href="https://webrtc.htetaungthant.com" target="_blank" rel="noopener">Open app</a>
-            <a class="text-link" href="#" aria-disabled="true" title="Coming soon">Docs</a>
+            <span class="btn small">View project</span>
           </div>
-        </article>
-
-        <!-- Computer Vision -->
-        <article class="card">
-          <div class="card-top">
-            <h3>Computer Vision</h3>
-            <p class="muted">People counting, detection & smart overlays for CCTV style UI.</p>
-          </div>
-          <div class="card-bottom">
-            <a class="btn small" href="https://cv.htetaungthant.com" target="_blank" rel="noopener">Open app</a>
-            <a class="text-link" href="#" aria-disabled="true" title="Coming soon">Docs</a>
-          </div>
-        </article>
-
-        <!-- Smart Doorbell -->
-        <article class="card">
-          <div class="card-top">
-            <h3>Smart Doorbell</h3>
-            <p class="muted">Motion/face detection alerts + snapshots powered by OpenCV.</p>
-          </div>
-          <div class="card-bottom">
-            <a class="btn small" href="https://doorbell.htetaungthant.com" target="_blank" rel="noopener">Open app</a>
-            <a class="text-link" href="#" aria-disabled="true" title="Coming soon">Docs</a>
-          </div>
-        </article>
-
-        <!-- CCTV -->
-        <article class="card">
-          <div class="card-top">
-            <h3>CCTV Dashboard</h3>
-            <p class="muted">Multi-camera viewer with per-tile alerts and recording.</p>
-          </div>
-          <div class="card-bottom">
-            <a class="btn small" href="https://cctv.htetaungthant.com" target="_blank" rel="noopener">Open app</a>
-            <a class="text-link" href="#" aria-disabled="true" title="Coming soon">Docs</a>
-          </div>
-        </article>
+        </a>
       </div>
     </div>
   </section>
@@ -107,9 +68,7 @@
     <div class="container about">
       <div>
         <h2 class="section-title">About</h2>
-        <p>
-          I’m an ICT student focused on networking, WebRTC, and computer vision. This site collects my live demos and experiments.
-        </p>
+        <p>I’m an ICT student focused on networking, WebRTC, and computer vision. This site collects my live demos and experiments.</p>
       </div>
       <ul class="stack">
         <li>Node.js</li>
@@ -127,8 +86,8 @@
     <div class="container">
       <h2 class="section-title">Contact</h2>
       <div class="contact-row">
-        <a class="btn primary" href="mailto:contact@htetaungthant.com">contact@htetaungthant.com</a>
-        <a class="btn ghost" href="https://webrtc.htetaungthant.com" target="_blank" rel="noopener">Try WebRTC demo</a>
+        <a class="btn primary" href="mailto:htetaungthant1998@gmail.com">htetaungthant1998@gmail.com</a>
+        <a class="btn ghost" href="https://kohat-live.htetaungthant.com" target="_blank" rel="noopener noreferrer">Open live app</a>
       </div>
     </div>
   </section>
@@ -145,7 +104,7 @@
   </footer>
 
   <script>
-    // Year + theme toggle
+    // Year + simple theme toggle (non-persistent)
     document.getElementById('y').textContent = new Date().getFullYear();
     const btn = document.getElementById('themeToggle');
     const root = document.documentElement;
